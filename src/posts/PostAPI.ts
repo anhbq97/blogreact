@@ -1,5 +1,5 @@
 import { Post } from './Post';
-const baseUrl = 'http://dumpbot.loc/api/v1';
+const baseUrl = 'https://api.poorclu.site/api/v1';
 const url = `${baseUrl}/posts`;
 
 function translateStatusToErrorMessage(status: number) {
