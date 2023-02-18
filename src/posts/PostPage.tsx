@@ -28,8 +28,6 @@ function PostPage(props: any) {
   return (
     <div>
       <>
-        <h1>Project Detail</h1>
-
         {loading && (
           <div className="center-page">
             <span className="spinner primary"></span>
