@@ -14,7 +14,7 @@ function App() {
   return (
     <Router>
       <Header />
-      <div className='container'>
+      <div className='container mt-md-5 mt-sm-2'>
         <Routes>
           <Route path="/" element={<PostsPage />} />
           <Route path="/post/:title_tag" element={<PostPage />} />

@@ -59,6 +59,7 @@ padding: 18px 20px 18px 20px;
 }
 
 .icon-menu {
+font-size: 11px;
 transition: transform 0.2s linear;
 -o-transition: transform 0.2s linear; /* opera */
 -ms-transition: transform 0.2s linear; /* IE 10 */
@@ -85,6 +86,7 @@ li.nav-item > a {
 color: var(--text_color);
 text-decoration: none!important;
 font-weight: bold;
+font-size: 13px;
 }
 
 /* This is sub-menu */

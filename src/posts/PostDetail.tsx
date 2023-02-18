@@ -1,6 +1,5 @@
 import React from 'react';
 import { Post } from './Post';
-import { User } from '../users/User';
 
 interface PostDetailProp {
   post: Post;
@@ -29,42 +28,15 @@ function PostDetail({post}: PostDetailProp) {
             </div>
           </div>
           <h2>{post.title}</h2>
-          <p>{post.summary}</p>
-          <div className="post-content" v-html="post.content">
-            {post.content}
+          {/* <p>{post.summary}</p> */}
+          <div className="post-content">
+            <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
           </div>
           <p>Xem thêm:
           </p>
         </div>
       </div>
     </div>
-
-    // <div className="row">
-    //   <div className="col-sm-6">
-    //     <div className="card large">
-    //       <img
-    //         className="rounded"
-    //         src={post.image}
-    //         alt={post.title}
-    //       />
-    //       <section className="section dark">
-    //         <h3 className="strong">
-    //           <strong>{post.title}</strong>
-    //         </h3>
-    //         <p>{post.summary}</p>
-    //         <p>Budget : {post.title_tag}</p>
-
-    //         <p>Signed: {post.title}</p>
-    //         <p>
-    //           <mark className="active">
-    //             {' '}
-    //             {post.title ? 'active' : 'inactive'}
-    //           </mark>
-    //         </p>
-    //       </section>
-    //     </div>
-    //   </div>
-    // </div>
   );
 }
 
