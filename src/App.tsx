@@ -16,8 +16,8 @@ function App() {
       <Header />
       <div className='container'>
         <Routes>
-          <Route path="/posts" element={<PostsPage />} />
-          <Route path="/posts/:title_tag" element={<PostPage />} />
+          <Route path="/" element={<PostsPage />} />
+          <Route path="/post/:title_tag" element={<PostPage />} />
         </Routes>
       </div>
     </Router>
