@@ -1,0 +1,33 @@
+footer {
+  background-color: white;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+footer .name-footer {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text_color);
+  display: block;
+  margin-bottom: 10px;
+}
+
+footer .title-footer {
+  font-weight: 500;
+  font-size: 19px;
+  color: var(--text_color);
+  display: block;
+  margin-bottom: 10px;
+}
+
+footer .description-footer {
+  font-size: 12px;
+  font-weight: 200;
+  display: block;
+}
+
+footer .icons-contact i{
+  cursor: pointer;
+  margin-right: 13px;
+  margin-top: 10px;
+}

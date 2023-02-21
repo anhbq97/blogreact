@@ -1,5 +1,5 @@
 import { Post } from './Post';
-const baseUrl = 'https://api.poorclu.site/api/v1';
+const baseUrl = 'http://dumpbot.loc/api/v1';
 const url = `${baseUrl}/posts`;
 
 function translateStatusToErrorMessage(status: number) {
@@ -63,7 +63,11 @@ function convertToPostModels(data: any[]): any {
 
   return [posts, clone.data];
 }
-
+function delay(ms: number) {
+  return function (x: any): Promise<any> {
+    return new Promise((resolve) => setTimeout(() => resolve(x), ms));
+  };
+}
 function convertToPostModel(item: any): Post {
   let clonePost: any = item.data;
   return new Post(clonePost);

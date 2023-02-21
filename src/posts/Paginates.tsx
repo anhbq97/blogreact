@@ -1,16 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Paginate } from './Paginate';
 import { Pagination } from 'react-bootstrap';
 
 interface PostPanigateProps {
   paginates: Paginate;
+  loadPage: (id: any) => void;
 }
 
-function Paginates({ paginates }: PostPanigateProps) {
-  // const { links } = paginates;
+function Paginates({ paginates, loadPage }: PostPanigateProps) {
   const prevPage = function (): string {
     let numPage = paginates.current_page - 1;
     return numPage.toString();
+  }
+
+  const handleLoadPage = (event: any) => {
+    event.preventDefault();
+    loadPage(event.target.dataset.url);
   }
 
   const listPage = function () {
@@ -32,20 +37,22 @@ function Paginates({ paginates }: PostPanigateProps) {
   }
 
   const items = listPage().map((link: any, i: number) => (
-      <Pagination.Item key={i} href={link.url} active={link.active}>{link.label}</Pagination.Item>
+      <Pagination.Item onClick={handleLoadPage} data-url={link.label} key={i} active={link.active}>{link.label}</Pagination.Item>
   ));
 
   return (
     <div className="row">
-      <Pagination className="pagination center-page">
-        <Pagination.First />
-        <Pagination.Prev href={prevPage()} />
+      <div className="col-md-4 offset-md-4 col-sm-12">
+        <Pagination className="pagination justify-content-center">
+          <Pagination.First onClick={handleLoadPage} data-url={0}/>
+          <Pagination.Prev onClick={handleLoadPage} data-url={prevPage()} />
 
-        {items}
+          {items}
 
-        <Pagination.Next href={nextPage()} />
-        <Pagination.Last />
-      </Pagination>
+          <Pagination.Next onClick={handleLoadPage} data-url={nextPage()} />
+          <Pagination.Last onClick={handleLoadPage} data-url={paginates.last_page}/>
+        </Pagination>
+      </div>
     </div>
   );
 

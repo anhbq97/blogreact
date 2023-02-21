@@ -8,6 +8,7 @@ import './App.css';
 import PostsPage from './posts/PostsPage';
 import PostPage from './posts/PostPage';
 import Header from './posts/components/Header';
+import Footer from './posts/components/Footer';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/post/:title_tag" element={<PostPage />} />
         </Routes>
       </div>
+      <Footer />
     </Router>
   );
 }

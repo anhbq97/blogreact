@@ -20,8 +20,9 @@ function ProjectCard(props: ProjectCardProps) {
 
   return (
     <div className="card box-post">
+      
       <Link to={'/post/' + post.title_tag} className="button rounded">
-        <img className="card-img-top" width={360} height={360} src={post.image} alt={post.title_tag} />
+        <img className="card-img-top" width={360} height={360} src={post.image ? post.image : process.env.PUBLIC_URL + 'logo512.png'} alt={post.title_tag} />
       </Link>
       <div className="card-body">
         <div className="card-info">

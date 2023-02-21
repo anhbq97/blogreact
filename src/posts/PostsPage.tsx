@@ -22,6 +22,10 @@ function ProjectsPage() {
     setPosts(updatedPost);
   }
 
+  const handleLoadPage = (id: any) => {
+    setCurrentPage(id);
+  }
+
   // const handleMoreClick = () => {
   //   setCurrentPage((currentPage) => currentPage + 1);
   // };
@@ -38,7 +42,8 @@ function ProjectsPage() {
           setPosts(data[0]);
           setPaginates(data[1]);
         } else {
-          setPosts((posts) => [...posts, ...data[0]]);
+          setPosts(data[0]);
+          // setPosts((posts) => [...posts, ...data[0]]);
           setPaginates(data[1]);
         }
       }
@@ -56,32 +61,31 @@ function ProjectsPage() {
   return (
     <>
       {error && (<div className="row mt-5">
-        <div className="center-page">
+        <div className="">
           <Alert className="card" key='danger' variant='danger'>
             <p>{error}</p>
           </Alert>
         </div>
       </div>)}
 
-      <PostList onSave={savePost} posts={posts}/>
-      <Paginates paginates={paginates}/>
-
-      {loading && (
-      <div className="row mt-5">
-        <div className="center-page large">
-          <Button variant="info" disabled>
-            <Spinner
-              as="span"
-              animation="grow"
-              size="sm"
-              role="status"
-              aria-hidden="true"
-            />
-            Loading...
-          </Button>
+      { loading ? (
+      <div className="row mt-5 mb-md-5 mb-xs-3">
+        <div className="text-center large">
+          <Spinner
+            as="span"
+            animation="grow"
+            size="sm"
+            role="status"
+            aria-hidden="true"
+          />
+          Loading...
         </div>
       </div>
-      )}
+      ) : 
+      <>
+        <PostList onSave={savePost} posts={posts}/>
+        <Paginates paginates={paginates} loadPage={handleLoadPage}/>
+      </> }
     </>
   )
 }
