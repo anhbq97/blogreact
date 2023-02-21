@@ -31,3 +31,11 @@ footer .icons-contact i{
   margin-right: 13px;
   margin-top: 10px;
 }
+
+/* CARD BODY */
+.box-post:hover {
+  cursor: pointer;
+  background-color: white;
+  box-shadow: rgb(100 100 111 / 20%) 0px 0px 20px 0px!important;
+}
+/* END CARD BODY */

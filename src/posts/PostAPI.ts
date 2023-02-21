@@ -1,5 +1,5 @@
 import { Post } from './Post';
-const baseUrl = 'http://dumpbot.loc/api/v1';
+const baseUrl = process.env.REACT_APP_API_ENDPOINT;
 const url = `${baseUrl}/posts`;
 
 function translateStatusToErrorMessage(status: number) {

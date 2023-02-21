@@ -1,10 +1,12 @@
 import { Post } from './Post';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser, faCalendar } from '@fortawesome/free-solid-svg-icons';
 
 
 function formatDescription(description: string): string {
-  return description.substring(0, 255) + '...';
+  return description.substring(0, 200) + '...';
 }
 
 interface ProjectCardProps {
@@ -24,10 +26,10 @@ function ProjectCard(props: ProjectCardProps) {
       <Link to={'/post/' + post.title_tag} className="button rounded">
         <img className="card-img-top" width={360} height={360} src={post.image ? post.image : process.env.PUBLIC_URL + 'logo512.png'} alt={post.title_tag} />
       </Link>
-      <div className="card-body">
+      <div className="card-body" style={{height: 270}}>
         <div className="card-info">
-          <small>Ngày tạo: <>{post.created_at.toLocaleString('en-US', { timeZone: 'UTC' })}</></small>
-          <small className="card-author"><i className="fa-solid fa-user" />{post.user.name}</small>
+          <small><FontAwesomeIcon icon={faCalendar} style={{fontSize: 11}} /> Ngày tạo: {post.created_at.toLocaleString('en-US', { timeZone: 'UTC' })}</small>
+          <small className="card-author"><FontAwesomeIcon icon={faUser} /> {post.user.name}</small>
           <div className="clearfix" />
         </div>
         <p className="card-title">

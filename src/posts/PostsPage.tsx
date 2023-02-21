@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import PostList from "./PostList";
 import { Post } from "./Post";
 import { postAPI } from './PostAPI';
-import { Button, Spinner, Alert } from 'react-bootstrap';
+import { Spinner, Alert } from 'react-bootstrap';
 import Paginates from './Paginates';
 import { Paginate } from './Paginate';
 

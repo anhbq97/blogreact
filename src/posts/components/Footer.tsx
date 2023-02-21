@@ -2,7 +2,7 @@ import '../../styles/footer.css';
 import { BrowserRouter as Route, NavLink } from 'react-router-dom';
 import Image from 'react-bootstrap/Image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faPhone, faAt } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faPhone, faAt } from '@fortawesome/free-solid-svg-icons';
 
 function Header() {
   return (

@@ -2,7 +2,7 @@ import '../../styles/header.css';
 import { BrowserRouter as Route, NavLink } from 'react-router-dom';
 import Image from 'react-bootstrap/Image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faAngleRight } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 function Header() {
   return (
