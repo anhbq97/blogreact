@@ -3,8 +3,18 @@ import { BrowserRouter as Route, NavLink } from 'react-router-dom';
 import Image from 'react-bootstrap/Image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
 
 function Header() {
+  const [navList, setNavList] = useState('navbar-list');
+  const onClickBar = function () {
+    if (navList == 'navbar-list') {
+      setNavList('navbar-list show');
+    } else {
+      setNavList('navbar-list');
+    }
+  }
+
   return (
     <>
       <div style={{backgroundColor: 'white'}}>
@@ -15,13 +25,13 @@ function Header() {
                 <nav className="navbar-menu">
                   {/* logo  */}
                   <div className="navbar-logo">
-                    <NavLink to="/posts" className="navbar-brand d-lg-inline-block d-md-inline-block">
+                    <NavLink to="/" className="navbar-brand d-lg-inline-block d-md-inline-block">
                       <Image src={process.env.PUBLIC_URL + '/CLU.png'} fluid bsPrefix='img-logo'></Image>
                       <span style={{ fontSize: 13, fontWeight: 'lighter' }}>Kiến thức để chia sẻ</span>
                     </NavLink>
                   </div>
-                  <button type="button" className="icon-bar-mobile"><span><FontAwesomeIcon icon={faBars} /></span></button>
-                  <div className="navbar-list" id="navbar-menu">
+                  <button type="button" className="icon-bar-mobile" onClick={onClickBar}><span><FontAwesomeIcon icon={faBars} style={{color: '#646161'}}/></span></button>
+                  <div className={navList} id="navbar-menu">
                     <ul className="navbar-items">
                       <li className="nav-item">
                         <NavLink to="/posts" className="button rounded">

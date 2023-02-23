@@ -28,6 +28,7 @@ function Header() {
                 <i className="fa-brands fa-instagram" />
                 <i className="fa-brands fa-twitter-square" />
               </div>
+              <a href="//www.dmca.com/Protection/Status.aspx?ID=31595e76-1262-4dbf-8af5-65cfe8f183f5" title="DMCA.com Protection Status" className="dmca-badge"> <img src ="https://images.dmca.com/Badges/DMCA_logo-grn-btn150w.png?ID=31595e76-1262-4dbf-8af5-65cfe8f183f5"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
             </div>
           </div>
         </div>
