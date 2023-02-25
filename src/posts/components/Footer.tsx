@@ -2,7 +2,7 @@ import '../../styles/footer.css';
 import { BrowserRouter as Route, NavLink } from 'react-router-dom';
 import Image from 'react-bootstrap/Image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faPhone, faAt } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faAt } from '@fortawesome/free-solid-svg-icons';
 
 function Header() {
   return (
@@ -21,14 +21,13 @@ function Header() {
             <div className="col-md-3">
               <b className="title-footer">Liên Hệ</b>
               <small className="description-footer"><FontAwesomeIcon icon={faEnvelope} /> bquocanh.97<FontAwesomeIcon icon={faAt} />gmail.com</small>
-              <small className="description-footer"><FontAwesomeIcon icon={faPhone} /> +84 963-527-200</small>
               <div className="icons-contact">
                 <i className="fa-brands fa-facebook-square" />
                 <i className="fa-brands fa-youtube" />
                 <i className="fa-brands fa-instagram" />
                 <i className="fa-brands fa-twitter-square" />
               </div>
-              <a href="//www.dmca.com/Protection/Status.aspx?ID=31595e76-1262-4dbf-8af5-65cfe8f183f5" title="DMCA.com Protection Status" className="dmca-badge"> <img src ="https://images.dmca.com/Badges/DMCA_logo-grn-btn150w.png?ID=31595e76-1262-4dbf-8af5-65cfe8f183f5"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
+              <a href="//www.dmca.com/Protection/Status.aspx?ID=f8d1c6a9-a64e-455f-b174-a2074d4c931b" title="DMCA.com Protection Status" className="dmca-badge"> <img src ="https://images.dmca.com/Badges/DMCA_badge_grn_60w.png?ID=f8d1c6a9-a64e-455f-b174-a2074d4c931b"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
             </div>
           </div>
         </div>

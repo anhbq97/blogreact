@@ -8,7 +8,7 @@ import { useState } from 'react';
 function Header() {
   const [navList, setNavList] = useState('navbar-list');
   const onClickBar = function () {
-    if (navList == 'navbar-list') {
+    if (navList === 'navbar-list') {
       setNavList('navbar-list show');
     } else {
       setNavList('navbar-list');
