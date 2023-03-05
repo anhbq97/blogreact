@@ -23,7 +23,7 @@ function ProjectCard(props: ProjectCardProps) {
   return (
     <div className="card box-post">
       
-      <Link to={'/post/' + post.title_tag} className="button rounded">
+      <Link to={'/bai-viet/' + post.title_tag} className="button rounded">
         <img className="card-img-top" width={360} height={360} src={post.image ? post.image : process.env.PUBLIC_URL + 'logo512.png'} alt={post.title_tag} />
       </Link>
       <div className="card-body" style={{height: 270}}>
@@ -33,13 +33,13 @@ function ProjectCard(props: ProjectCardProps) {
           <div className="clearfix" />
         </div>
         <p className="card-title">
-          <Link to={'/post/' + post.title_tag} className="button rounded card-tag">
+          <Link to={'/bai-viet/' + post.title_tag} className="button rounded card-tag">
             {post.title}
           </Link>
         </p>
         <p className="card-summary">{formatDescription(post.summary)}</p>
         <p className="card-readmore">
-          <Link to={'/post/' + post.title_tag} className="button rounded card-tag">
+          <Link to={'/bai-viet/' + post.title_tag} className="button rounded card-tag">
             Đọc tiếp <i className="fa-solid fa-angles-right" />
           </Link>
         </p>

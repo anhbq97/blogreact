@@ -3,16 +3,14 @@ import { Post } from './Post';
 
 interface ProjectFormProps {
   post: Post;
-  onSave: (post: Post) => void;
   onCancel: () => void;
 }
 
 
-function ProjectForm({ post: initialProject, onSave, onCancel }: ProjectFormProps) {
+function ProjectForm({ post: initialProject, onCancel }: ProjectFormProps) {
   const [post, setPost] = useState(initialProject);
   const handleSubmit = (event: SyntheticEvent) => {
     event.preventDefault();
-    onSave(post);
   }
   const handleChange = (event: any) => {
     const { type, name, value, checked } = event.target;

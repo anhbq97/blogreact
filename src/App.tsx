@@ -6,23 +6,18 @@ import './App.css';
 // import './styles/header.css';
 
 import PostsPage from './posts/PostsPage';
-import PostPage from './posts/PostPage';
-import Header from './posts/components/Header';
-import Footer from './posts/components/Footer';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ProductsPage from './products/ProductsPage';
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <Router>
-      <Header />
-      <div className='container mt-md-5 mt-sm-2'>
-        <Routes>
-          <Route path="/" element={<PostsPage />} />
-          <Route path="/post/:title_tag" element={<PostPage />} />
-        </Routes>
-      </div>
-      <Footer />
-    </Router>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/*" element={<PostsPage />} />
+        <Route path="/san-pham/*" element={<ProductsPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

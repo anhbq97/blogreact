@@ -34,7 +34,7 @@ function Header() {
                   <div className={navList} id="navbar-menu">
                     <ul className="navbar-items">
                       <li className="nav-item">
-                        <NavLink to="/posts" className="button rounded">
+                        <NavLink to="/gioi-thieu" className="button rounded">
                           Giới thiệu
                         </NavLink>
                       </li>
@@ -79,15 +79,15 @@ function Header() {
                         </ul>
                       </li>
                       <li className="nav-item">
-                        <NavLink to="/posts" className="button rounded">
+                        <NavLink to="/ve-toi" className="button rounded">
                           Về tôi
                         </NavLink>
                       </li>
-                      <li className="nav-item">
+                      {/* <li className="nav-item">
                         <NavLink to="/posts" className="button rounded">
                           Liên Hệ
                         </NavLink>
-                      </li>
+                      </li> */}
                     </ul>
                   </div>
                 </nav>
